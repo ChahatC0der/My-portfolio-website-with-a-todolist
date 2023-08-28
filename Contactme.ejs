@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactme</title>
+    <link rel="stylesheet" href="/contactme.css">
+</head>
+<body>
+    <%- include("components/header",{username:username}) %>
+
+    <!-- <div class="container">
+        <div class="navbar">
+            <div class="logo-container">
+                <img class="logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAC0AJwDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAEFBAYHAwL/xAA1EAACAgIAAwYEAwgDAQAAAAAAAQIDBBEFEiEGEzFBUWFxgZGhIjKxFCNTYnJzgsGSotHh/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAUGAQMEAgf/xAAtEQACAgECBAUDBAMAAAAAAAAAAQIDEQQhBRIxQQYTIlGBMmGxM3GRodHh8P/aAAwDAQACEQMRAD8A62AAAAAAAAACSAAAAAAAACQAQAAAAAAAAAAAAAAAAACSAAAAAAAACQQAAAAAAAAAAAAAAAAAAACSAAAAeVmRjVPVt9Nb9LLIRf8A2ZlJvoYbS3Z6gxVxDhjelm4m/wC9X/6ZELK7FuucJr1hJSX1QcWuqMKcZdGfQAMHoAAAAAAAAAAAAAAAEkAAbKriHGsXCcqq132QujhF6hB/zy/0vsUnavtFfgyjw7AnyZE4c+RevzVQltKFf8z67fl8XuOhrJy1LmV93Nve3OT+u2Sei0Svj5snt2+5A6/inkydVXXu/Y3LK4rxPKb575Qg9/u6G64a9Hp7fzbMHoYeDlvJhJT13teubS0pJ+Ekv1MwmI1xr2isEFK2Vvqk8g+oSnXJSrlKEk9qUJOLXzj1PkGTynjdFvicf4hjuMb3+01eD7zSsS9pr/aZs+Hn4mdBzontr89culkP6l/s0E9Kbrse2F1M3CyD/DKP6NeGvVHDfooWLMdmSem4jZU8T3R0QGFwzNWfiQvaUbFKVd0V4RsjrevZ9GviZpByi4txfVFnhNWRU49GAAeT2SQAAAAAAAADHy7u5qbT/HL8MPZ+b+RkFTnWc93L5VpR+b6sguPa96HRSnB+p7L93/hZN9FfmTSZz/tPTbXxHvpJ93k01Srl5N1xVcl8eifzKM6VlYmJm1OnJqjZW3zLe1KMvKUJLqmVmP2Q4ZdfGLuzHXvmlHnrWorx/FGGzPhvxjpI6SrR6hNWRSisLPNjZfPvnb7le4nwC+d8rqWuWW+/Yp+zXDM7iFuTKmKjTBRqsunvu4y3zOK11bXTovXyN6x+zvC6ku+VmRPzdknGG/aEGl9dlli4uLhUVY2LTCqipahCC0l5tvz2/NnuWq/W2Wy9OyNul4ZVTFc65mV74LwVrX7FSvePNF/WL2V2X2bpacsK2UJ+KrubnB+yl+Zfc2EGiGotg8qR1z0dE1hxX4Od3U3Y9k6boShZD80ZfZprpr0PM33N4fhZ8Yq+D5o75LIPlsjvyUl5exg1dnOF1zU5u+9J7ULpR7v/ACjCK38yUhxCDj6+pB2cJtU8QeUR2cpsrwZ2TTSyb5W1p/w1GMFL562i6ISSSSWkuiS8EkSRFtjsm5vuWCipU1qtdgADWbgAAAAAAAAAUNsua26XrZN/dl8UFianYvSc192ULxm35VS7Zf4R36L6mfJZcNiuW6fm5RgvglsrS04c13dq81Zv6pFc8LxjLiMOb2eP4OjVfpszQAfYCIAAAJBAAAAAAAAAAAAAAAAABS5cOTIt6dJPnX+XUujC4hTzQjal1r6S/pf/AIVnxNo3qtC5R6wefjv/AFv8HTpp8k9+5WdW9JdfY98LJqrv7t21bs1BxVkHJPfRuKe/sap2h4jdXOOBROUF3cbMmUG1KXP1jXtdda6v137Gspaaa6NPaa6PZT+DcJui4axT5X1Sxn+d+/4LNXw9315k8ZO1A0ns92n5ILD4pOclDpTlS3KSi/CN2uvTyf19Tc67aboRsqnCyuX5Z1yUov4OPQ+o1WKyOUVvVaS3Sy5bF+z7M+wDEzeIYGBBzyrowetxgvxWz9owXU2Npbs5oQlN8sFlmXtdfbxPmFtNm+7shPXjySjLXx0znnFuM5fE7GtyqxIv93RGXR/zW68X9l93WVzspnGymc67IvcZ1txkn7NHFLWJPCWxZKvD9kq+ac8S9sZ/vJ1gFVwHiM+JYEbbdd/TZKi9paUpRSkppL1TTZanZGSksor11UqZuufVAAHo1AAAAAAAAAANJpprae00/NADqDnHa3h1uLnrKSbxsuMIwl5RsrjyuEn66Sa/+GuHZcnGxsum3HyKo202LU4TW0/PfrteTNF4n2Vvw5Suw65ZONtvlSbvrXpKK8V7r6eZET0apSVS9K7exb+F8ShOKpteGuj7P/ZruPFpSm/PSXw9TLqvyKHzUXW1SfnTOcH8+Vo8/VenRr0fo0DmWxZuVNYe5mS4pxiS5ZZ+Y1/fsW/o9mI3KTcpNuTfWUm238W+pAMtt9WYjXCH0pIBtJNt6S6ts+6ab8ixU49Vl1z8IVRcpfGXkl7to3Dg/ZmGPKvK4jyW5EWpVUR/FTTJdVKTf5pLy8l7+JsrqlY9jl1mup0kc2Pf27sy+zGFdicOc7ouFmXdLI5JbUoQcYwgpJ+bS38y8AJmEVCKij55qLpX2ytl1YAB6NAAAAAAAAAAAABJBJABgZnCeFZzcsnFrlP+JHcLf+cNS+5UW9j8CXWnLyq/aartS+qT+5swNcqoS6o7KddqaFiubS/73NTXY2G+vErde2PBP6uT/Qy6OyXB62ndPJyNeKss5IP4xqUf1NhB4WnrXY3T4rrJrDsfxt+Dxx8XExK1VjUVU1rX4aoqKfu9eLPYkG5LHQjm3J5b3IABkwAAAAAAAAAAAAAAAASQAAAAAAAASACAAAAAAAAAAAAAAAAAAASQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z" alt="No image found">
+                <div class="logo-text">hahat Kukreja</div>
+            </div>
+            <div class="nav-items">
+                <div><a href="/">Home</a></div>
+                <div><a href="/projects">Projects</a></div>
+                <div><a href="/skills">Skills</a></div>
+                <div><a href="/contactme">Contact me</a></div>
+                <div><a href="/ToDolist">ToDolist</a></div>
+                <div><a href="/login">Login</a></div>
+                <div><a href="/signup">Signup</a></div>
+                <div><a href="/logout">LogOut</a></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="contactus-form-container">
+        <div class="container">
+            <h1 class="contactus-heading">
+                Contact us
+            </h1>
+            <h3 class="contactus-subheading">
+                Questions,thoughts or just want to say hello?
+            </h3>
+            <div class="contactus-form-container">
+                <form action="">
+                    <div class="formfields-container">
+                        <input class="formfield"
+                        type="text"
+                        name="name"
+                        id=""
+                        placeholder="Enter your name" />
+
+                        <input class="formfield"
+                        type="email"
+                        name="email"
+                        id=""
+                        placeholder="Enter your email" />
+
+                        <input class="formfield"
+                        type="text"
+                        name="Subject"
+                        id=""
+                        placeholder="Enter your subject" />
+
+                        <textarea name="message" class="formfield formfield-textarea"
+                         id="" 
+                         cols="30"
+                          rows="10"
+                          placeholder="Enter your message"></textarea>
+
+                          <div class="btn-pink" id="btn1">
+                            Contact us
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-faded-text">
+                    Chahat Kukreja
+                </div>
+
+                <div class="link-wrapper">
+                    <div>
+                        <a href="/projects">Projects</a>
+                    </div>
+                    <div>
+                        <a href="/skills">Skills</a>
+                    </div>
+                    <div>
+                        <a href="/contactme">Contact us</a>
+                    </div>
+                    <div>
+                        <a href="/ToDolist">Todolist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

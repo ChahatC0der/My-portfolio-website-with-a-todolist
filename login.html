@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    
+    
+    <form action="/login" action="forgotpass" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email id" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <div id="signup"><a href="/signup" >Signup</a></div>
+</body>
+</html>

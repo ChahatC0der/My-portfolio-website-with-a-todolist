@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left-pane {
+    flex: 1;
+    padding: 20px;
+    background-color: #f1eded;
+  }
+  
+  .right-pane {
+    flex: 1;
+    padding: 20px;
+    color: rgb(10, 10, 21);
+    background-color: rgb(162, 251, 98);
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    margin-bottom: 10px;
+  }
+  
+  #task-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #task-form label {
+    margin-bottom: 5px;
+  }
+  
+  #task-form input {
+    margin-bottom: 10px;
+  }
+  

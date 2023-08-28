@@ -1,0 +1,85 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    /* border: black dotted 6px; */
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: orangered dotted 6px; */
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+.logo{
+    width: 80px;
+}
+.logo-text{
+    height: 50px;
+    font-weight: 400;
+    font-size: xx-large;
+    /* border: red solid 4px; */
+    padding-top: 8px;
+    margin-left: -1rem;
+}
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+.nav-items div{
+    font-size: 30px;
+    font-weight: 500px;
+    cursor: pointer;
+}
+.nav-items div a{
+    color: black;
+}
+.nav-items div:hover{
+    font-weight: bold ;
+    transition: 0.8s;
+
+}
+a{
+    text-decoration: none;
+}
+
+footer{
+    position: relative;
+    margin-top:-10px ;
+    background-color: #343d68;
+    padding: 5rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer-faded-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535387;
+    user-select: none;
+    font-size: 5em;
+}
+.link-wrapper{
+    display: flex;
+    gap: 2rem;
+
+}
+.link-wrapper div a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.link-wrapper div a:hover{
+    color: orangered;
+}
